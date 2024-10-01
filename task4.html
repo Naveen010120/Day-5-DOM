@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: radial-gradient(violet,chocolate,rgb(57, 46, 121));
+        }
+        ul{
+            background: linear-gradient(rgb(10, 176, 182),red);
+            padding: 80px;
+            border-radius: 10px;
+            
+        }
+        li{
+            font-size: 1.8rem;
+            text-transform: capitalize;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+   
+    <script>
+        let   arr=["dog", "cat", "bird", "fish"];
+        let res=arr.map(element=>element.split("").reverse().join(""));
+        let ul=document.createElement('ul');
+        for(data of res){
+            let li=document.createElement('li');
+            li.innerHTML=data
+            ul.append(li);
+        }
+        document.body.append(ul);
+    </script>
+</body>
+</html>

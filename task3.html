@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: radial-gradient(rgb(92, 83, 92),rgb(196, 189, 185),rgb(170, 32, 44));
+        }
+        div{
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+        let arr=["I", "am", "learning", "JavaScript", "today"];
+        let res=arr.join(" ")
+        let div=document.createElement('div');
+        div.innerHTML=`${res.slice(0,res.length)+"."}`
+        document.body.appendChild(div);
+    </script>
+</body>
+</html>

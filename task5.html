@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: radial-gradient(violet,chocolate,rgb(57, 46, 121));
+        }
+        ul{
+            background: linear-gradient(rgb(218, 148, 20),rgb(38, 0, 255));
+            padding: 40px;
+            border-radius: 10px;
+        }
+        li{
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        let array3=["Apple", "banana", "grape"];
+        let task5=document.createElement("div");
+        task5.className="task5";
+        task5.innerHTML="<h2>Task5</h2>"
+        document.body.appendChild(task5);
+        array3.map(n=>{
+          let ul=document.createElement("ul");
+          let li=document.createElement("li");
+          let count=n.match(/[aeiouAEIOU]/g).length;
+          li.innerText=n+`(${count} vowels)`;
+          ul.appendChild(li);
+          task5.appendChild(ul);
+        })
+       
+    </script>
+</body>
+
+</html>

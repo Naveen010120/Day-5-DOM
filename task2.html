@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: radial-gradient(rgb(130, 238, 144),rgb(185, 29, 55),rgb(231, 114, 36));
+        }
+        p{
+            font-size: 1.5rem;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+       arr= ["hello", "world", "javascript", "dom"];
+       let res=arr.map(data=>data.toUpperCase());
+       let p=document.createElement('p');
+       p.innerHTML=res.join(" ")
+       document.body.append(p);
+    </script>
+</body>
+</html>

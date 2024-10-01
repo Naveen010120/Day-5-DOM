@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: radial-gradient(violet,chocolate,rgb(57, 46, 121));
+        }
+        ul{
+            background: linear-gradient(yellow,red);
+            padding: 40px;
+            border-radius: 10px;
+        }
+        li{
+            font-size: 1.8rem;
+            text-transform: capitalize;
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+      let arr =["apple", "banana", "grape", "watermelon", "kiwi", "strawberry"];
+      
+        let res=arr.filter(Element=>Element.length>5);
+        let ul=document.createElement("ul");
+        for(data of res){
+        let li=document.createElement('li');
+        li.innerHTML=data;
+        ul.appendChild(li);
+        }
+        document.body.appendChild(ul);
+      
+    </script>
+</body>
+</html>
